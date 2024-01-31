@@ -8,14 +8,16 @@ export const Item = ({
   item: { url, MainImage, title, currency_code, price, quantity },
 }: ItemProps) => {
   if (
-    url == undefined ||
-    MainImage === undefined ||
-    title === undefined ||
-    currency_code === undefined ||
-    price === undefined ||
-    quantity === undefined
+    !url ||
+    !MainImage ||
+    !title ||
+    !currency_code ||
+    !price ||
+    !quantity
   ) {
+
     return null;
+
   }
   return (
     
